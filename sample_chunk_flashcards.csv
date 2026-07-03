@@ -1,0 +1,7 @@
+id,category,sentence_en,sentence_ja,chunk_no,chunk_type,chunk_en,chunk_ja,vocab,vocab_ja,vocab_explanation,grammar_explanation,audio_text_en,audio_text_ja,note
+S001,形成外科,The ALT flap can be harvested with a long vascular pedicle.,ALT皮弁は長い血管茎を付けて採取できる。,1,主語,The ALT flap,ALT皮弁,ALT flap,ALT皮弁,anterolateral thigh flapの略です。,文の主語です。,The ALT flap,ALT皮弁,
+S001,形成外科,The ALT flap can be harvested with a long vascular pedicle.,ALT皮弁は長い血管茎を付けて採取できる。,2,述語,can be harvested,採取できる,harvest,採取する,皮弁を採取する時によく使います。,can be harvested は受動態の述語です。,can be harvested,採取できる,
+S001,形成外科,The ALT flap can be harvested with a long vascular pedicle.,ALT皮弁は長い血管茎を付けて採取できる。,3,手段,with a long vascular pedicle,長い血管茎を付けて,vascular pedicle,血管茎,血管柄・血管茎を表します。,with は付帯状況を表します。,with a long vascular pedicle,長い血管茎を付けて,
+S002,学会発表,We decided to use a free flap because the defect was large.,欠損が大きかったため、遊離皮弁を使用することにした。,1,主語,We,私たちは,,,,主語です。,We,私たちは,
+S002,学会発表,We decided to use a free flap because the defect was large.,欠損が大きかったため、遊離皮弁を使用することにした。,2,意味ユニット,decided to use a free flap,遊離皮弁を使用することにした,decide to,〜することに決める,decide to は一つの意味ユニットとして覚えると使いやすいです。,decided to use が中心の述語です。,decided to use a free flap,遊離皮弁を使用することにした,
+S002,学会発表,We decided to use a free flap because the defect was large.,欠損が大きかったため、遊離皮弁を使用することにした。,3,理由,because the defect was large,欠損が大きかったため,defect,欠損,再建領域でよく使う名詞です。,because以下が理由を表します。,because the defect was large,欠損が大きかったため,

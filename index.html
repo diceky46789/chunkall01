@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Chunk Flashcard Pro v1.0</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <h1>Chunk Flashcard Pro</h1>
+      <p>Ver.1.0 CSV読み込み・保存・練習開始</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>CSVを追加</h2>
+      <p class="hint">テンプレート形式のCSVを選ぶと、この端末内に保存されます。</p>
+      <input id="csvInput" type="file" accept=".csv,text/csv">
+      <div class="row">
+        <a class="button secondary" href="template_chunk_flashcards.csv" download>テンプレートCSV</a>
+        <a class="button secondary" href="sample_chunk_flashcards.csv" download>サンプルCSV</a>
+      </div>
+      <div id="importStatus" class="status"></div>
+    </section>
+
+    <section class="panel">
+      <h2>保存済みCSV</h2>
+      <div id="libraryList" class="library-list"></div>
+    </section>
+
+    <section class="panel practice-panel" id="practicePanel">
+      <div class="practice-top">
+        <div>
+          <h2 id="practiceTitle">練習</h2>
+          <p id="practiceInfo" class="hint">保存済みCSVを選んでください。</p>
+        </div>
+        <button id="backToLibraryBtn" class="button secondary small">一覧へ</button>
+      </div>
+
+      <div class="controls">
+        <label>方向
+          <select id="directionSelect">
+            <option value="en-ja">英語 → 日本語</option>
+            <option value="ja-en">日本語 → 英語</option>
+          </select>
+        </label>
+        <label>チャンク種類
+          <select id="typeFilter"></select>
+        </label>
+      </div>
+
+      <div id="card" class="card" role="button" tabindex="0">
+        <div id="cardFront" class="card-main">CSVを選んでください</div>
+        <div id="cardSub" class="card-sub">タップで答えを表示</div>
+      </div>
+
+      <div class="nav-row">
+        <button id="prevBtn" class="button">前へ</button>
+        <button id="flipBtn" class="button primary">答え</button>
+        <button id="nextBtn" class="button">次へ</button>
+      </div>
+
+      <div class="detail-box">
+        <div><strong>全文英語</strong><p id="sentenceEn"></p></div>
+        <div><strong>全文日本語</strong><p id="sentenceJa"></p></div>
+        <div><strong>単語・熟語</strong><p id="vocabBox"></p></div>
+        <div><strong>解説</strong><p id="explainBox"></p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>データはブラウザのlocalStorageに保存されます。</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
