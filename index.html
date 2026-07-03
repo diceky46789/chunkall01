@@ -3,15 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Chunk Flashcard Pro v1.0</title>
+  <title>Chunk Flashcard Pro v2.0</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="app-header">
     <div>
       <h1>Chunk Flashcard Pro</h1>
-      <p>Ver.1.0 CSV読み込み・保存・練習開始</p>
+      <p>Ver.2.0 CSV管理・フラッシュカード練習</p>
     </div>
+    <div class="version-badge">v2.0</div>
   </header>
 
   <main>
@@ -22,11 +23,12 @@
       <div class="row">
         <a class="button secondary" href="template_chunk_flashcards.csv" download>テンプレートCSV</a>
         <a class="button secondary" href="sample_chunk_flashcards.csv" download>サンプルCSV</a>
+        <button id="loadSampleBtn" class="button secondary">サンプルを追加</button>
       </div>
       <div id="importStatus" class="status"></div>
     </section>
 
-    <section class="panel">
+    <section class="panel" id="libraryPanel">
       <h2>保存済みCSV</h2>
       <div id="libraryList" class="library-list"></div>
     </section>
@@ -50,9 +52,20 @@
         <label>チャンク種類
           <select id="typeFilter"></select>
         </label>
+        <label>表示順
+          <select id="orderSelect">
+            <option value="normal">CSV順</option>
+            <option value="shuffle">シャッフル</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="progress-wrap">
+        <div id="progressBar" class="progress-bar"></div>
       </div>
 
       <div id="card" class="card" role="button" tabindex="0">
+        <div class="card-label" id="cardLabel">問題</div>
         <div id="cardFront" class="card-main">CSVを選んでください</div>
         <div id="cardSub" class="card-sub">タップで答えを表示</div>
       </div>
@@ -61,6 +74,11 @@
         <button id="prevBtn" class="button">前へ</button>
         <button id="flipBtn" class="button primary">答え</button>
         <button id="nextBtn" class="button">次へ</button>
+      </div>
+
+      <div class="quick-row">
+        <button id="firstBtn" class="button secondary small">最初</button>
+        <button id="lastBtn" class="button secondary small">最後</button>
       </div>
 
       <div class="detail-box">
